@@ -1016,3 +1016,139 @@ a:hover .ext-arrow {
   line-height: 1.7;
   color: var(--text-secondary);
 }
+
+/* --- EXPERIENCE -------------------------------------------- */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 60px;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-item:last-of-type {
+  border-bottom: none;
+}
+
+.exp-divider {
+  display: none;
+}
+
+.exp-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 6px;
+}
+
+.exp-period {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.exp-location {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.exp-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.exp-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.exp-role {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.exp-type {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 2px 7px;
+}
+
+.exp-company {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.exp-points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exp-point {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  padding-left: 16px;
+  position: relative;
+}
+
+.exp-point::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 5px;
+  height: 1px;
+  background: var(--text-muted);
+}
+
+.exp-point strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.exp-highlights {
+  display: flex;
+  gap: 40px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+
+.exp-highlight-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.exp-highlight-val {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.exp-highlight-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}

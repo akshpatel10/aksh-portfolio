@@ -15,6 +15,9 @@
     initActiveNavHighlight();
     initScrollReveal();
     initSmoothScroll();
+    initProjectHover();
+    initNavScrollBehavior();
+    initStackItemHover();
   }
 
   // ─── CURRENT YEAR ──────────────────────────────────────────
@@ -27,7 +30,7 @@
   function initMobileNav() {
     const btn = document.getElementById('mobile-menu-btn');
     const nav = document.getElementById('mobile-nav');
-    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-ext-link');
 
     if (!btn || !nav) return;
 
@@ -105,14 +108,14 @@
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -60px 0px'
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
     });
 
     revealEls.forEach(el => observer.observe(el));
   }
 
-  // ─── SMOOTH SCROLL (fallback for older browsers) ───────────
+  // ─── SMOOTH SCROLL ─────────────────────────────────────────
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -121,9 +124,82 @@
         const target = document.querySelector(href);
         if (!target) return;
         e.preventDefault();
-        const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 64;
+        const navHeight = 64;
         const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
         window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+  }
+
+  // ─── NAV SCROLL BEHAVIOR ───────────────────────────────────
+  function initNavScrollBehavior() {
+    const header = document.getElementById('site-header');
+    if (!header) return;
+
+    let lastScroll = 0;
+    const THRESHOLD = 80;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+
+      // Add scrolled class for solid bg
+      header.classList.toggle('scrolled', currentScroll > 20);
+
+      // Hide/show on scroll direction
+      if (currentScroll > THRESHOLD) {
+        if (currentScroll > lastScroll) {
+          header.classList.add('nav-hidden');
+        } else {
+          header.classList.remove('nav-hidden');
+        }
+      } else {
+        header.classList.remove('nav-hidden');
+      }
+
+      lastScroll = currentScroll;
+    }, { passive: true });
+  }
+
+  // ─── PROJECT HOVER INTERACTION ─────────────────────────────
+  function initProjectHover() {
+    const featuredVisual = document.querySelector('.project-featured-visual');
+    const bars = document.querySelectorAll('.pv-bar');
+    if (!featuredVisual || !bars.length) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    // Animate bars subtly on hover with slight stagger
+    featuredVisual.addEventListener('mouseenter', () => {
+      bars.forEach((bar, i) => {
+        setTimeout(() => {
+          bar.style.transform = 'scaleY(1.05)';
+          bar.style.transformOrigin = 'bottom';
+        }, i * 40);
+      });
+    });
+
+    featuredVisual.addEventListener('mouseleave', () => {
+      bars.forEach(bar => {
+        bar.style.transform = 'scaleY(1)';
+      });
+    });
+  }
+
+  // ─── STACK ITEM STAGGER ────────────────────────────────────
+  function initStackItemHover() {
+    const stackCols = document.querySelectorAll('.stack-col');
+    stackCols.forEach(col => {
+      const items = col.querySelectorAll('.stack-item');
+      col.addEventListener('mouseenter', () => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        items.forEach((item, i) => {
+          item.style.transitionDelay = `${i * 20}ms`;
+        });
+      });
+      col.addEventListener('mouseleave', () => {
+        items.forEach(item => {
+          item.style.transitionDelay = '0ms';
+        });
       });
     });
   }

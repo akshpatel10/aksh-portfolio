@@ -1781,3 +1781,119 @@ a:hover .ext-arrow {
     gap: 8px;
   }
 }
+
+/* --- MICRO ANIMATIONS & INTERACTIONS ---------------------- */
+
+/* Nav scroll state */
+#site-header.scrolled {
+  background: rgba(10, 10, 10, 0.96);
+  border-bottom-color: var(--border-mid);
+}
+
+#site-header.nav-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.35s var(--ease-in-out), background 0.25s, border-color 0.25s;
+}
+
+#site-header {
+  transition: transform 0.35s var(--ease-in-out), background 0.25s, border-color 0.25s;
+}
+
+/* Project card hover lift */
+.project-card {
+  transition: border-color var(--transition), transform 0.3s var(--ease-out);
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Project featured visual bar animation */
+.pv-bar {
+  transition: background var(--transition), transform 0.3s var(--ease-out);
+  transform-origin: bottom center;
+}
+
+/* Stack item color transition on stagger */
+.stack-item {
+  transition: color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+}
+
+.stack-item:hover {
+  transform: translateX(4px);
+}
+
+/* About contact item hover */
+.about-contact-item {
+  transition: padding-left var(--transition);
+}
+
+.about-contact-item:hover {
+  padding-left: 8px;
+}
+
+/* Button press effect */
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Recognition item hover */
+.recognition-item {
+  transition: background var(--transition);
+}
+
+.recognition-item:hover {
+  background: rgba(255,255,255,0.01);
+}
+
+/* Exp item hover */
+.exp-item {
+  transition: background var(--transition);
+}
+
+.exp-item:hover {
+  background: rgba(255,255,255,0.01);
+}
+
+/* External link arrow micro animation */
+a .ext-arrow {
+  display: inline-block;
+  transition: transform 0.2s var(--ease-out);
+}
+
+a:hover .ext-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Section number color pulse on section enter */
+.section-header.visible .section-number {
+  animation: num-in 0.5s var(--ease-out) forwards;
+}
+
+@keyframes num-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Project featured content reveal */
+.project-featured {
+  transition: border-color 0.3s var(--ease-out);
+}
+
+/* contact link subtle left indent on hover */
+.contact-link {
+  transition: border-color var(--transition), padding-left var(--transition);
+}
+
+.contact-link:hover {
+  padding-left: 8px;
+}
+
+/* Footer links */
+.footer-link {
+  transition: color var(--transition), letter-spacing var(--transition);
+}
+
+.footer-link:hover {
+  letter-spacing: 0.12em;
+}

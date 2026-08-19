@@ -1897,3 +1897,165 @@ a:hover .ext-arrow {
 .footer-link:hover {
   letter-spacing: 0.12em;
 }
+
+/* -----------------------------------------------------------
+   VISUAL SYSTEM REFINEMENTS
+   Typography, spacing, borders, color hierarchy polish
+----------------------------------------------------------- */
+
+/* --- IMPROVED TYPOGRAPHY HIERARCHY ----------------------- */
+
+/* Ensure no orphan section padding overflows */
+.section--work,
+.section--experience,
+.section--about,
+.section--stack,
+.section--education,
+.section--recognition {
+  border-bottom: 1px solid var(--border);
+}
+
+/* Section inner containers inherit padding properly */
+.section--experience .container,
+.section--about .container,
+.section--stack .container,
+.section--education .container,
+.section--recognition .container {
+  padding-top: var(--section-pad);
+  padding-bottom: var(--section-pad);
+}
+
+/* Refined section header spacing */
+.section-header {
+  margin-bottom: 56px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Hero — tighter line height for large display text */
+.hero-name {
+  line-height: 0.88;
+}
+
+/* Improved project name sizing */
+.project-name {
+  line-height: 0.95;
+}
+
+/* Refined exp role size */
+.exp-role {
+  letter-spacing: -0.025em;
+}
+
+/* Sidebar contact item better spacing */
+.about-contact-item {
+  padding: 14px 0;
+}
+
+/* Better stack column heights */
+.stack-col:first-child {
+  border-bottom: 1px solid var(--border);
+}
+
+/* Recognition primary item — top border emphasis */
+.recognition-item--primary {
+  border-top: 1px solid var(--accent-dim);
+}
+
+/* Edu item top border */
+.education-list {
+  border-top: 1px solid var(--border);
+}
+
+/* Experience list top border */
+.experience-list {
+  border-top: 1px solid var(--border);
+}
+
+/* Tighter monospace meta on mobile */
+@media (max-width: 480px) {
+  .exp-period,
+  .recognition-type,
+  .edu-period {
+    font-size: 0.58rem;
+  }
+
+  .project-card-sub,
+  .project-subtitle {
+    font-size: 0.6rem;
+  }
+}
+
+/* --- SPACING REFINEMENTS ---------------------------------- */
+
+/* Hero indicator full width */
+.hero-indicator {
+  width: 100%;
+}
+
+/* Project featured meta gap */
+.project-meta {
+  gap: 6px;
+}
+
+/* Card bottom padding breath */
+.project-card-content {
+  padding-bottom: 32px;
+}
+
+/* Contact inner vertical rhythm */
+.contact-inner {
+  padding-top: 8px;
+}
+
+/* Recognition list top border */
+.recognition-list {
+  border-top: 1px solid var(--border);
+}
+
+/* --- COLOR REFINEMENTS ------------------------------------ */
+
+/* Accent color on hovered project num */
+.project-card:hover .project-num,
+.project-featured:hover .project-num {
+  color: var(--accent);
+  transition: color var(--transition);
+}
+
+/* Stronger contrast on primary exp role */
+.exp-role {
+  color: var(--text-primary);
+}
+
+/* Recognition title color */
+.recognition-item--primary .recognition-title {
+  color: var(--text-primary);
+}
+
+/* --- BORDER REFINEMENTS ----------------------------------- */
+
+/* Hero bottom inner border separator */
+.hero-indicator {
+  margin-top: 8px;
+}
+
+/* Project featured — hover border brightens */
+.project-featured:hover {
+  border-color: var(--border-mid);
+}
+
+.project-featured:hover .project-featured-visual {
+  border-right-color: var(--border-mid);
+}
+
+/* --- FONT RENDERING POLISH -------------------------------- */
+h1, h2, h3, h4 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* --- SELECTION COLOR -------------------------------------- */
+::selection {
+  background: var(--accent-dim);
+  color: var(--text-primary);
+}

@@ -2059,3 +2059,163 @@ h1, h2, h3, h4 {
   background: var(--accent-dim);
   color: var(--text-primary);
 }
+
+/* -----------------------------------------------------------
+   ACCESSIBILITY & RESPONSIVE FIXES
+----------------------------------------------------------- */
+
+/* --- SKIP LINK -------------------------------------------- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 8px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  z-index: 999;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+/* --- IMPROVED FOCUS STATES -------------------------------- */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Ensure interactive buttons have pointer */
+.btn,
+.about-contact-item,
+.contact-link,
+.contact-social-link,
+.nav-link,
+.nav-ext-link,
+.mobile-nav-link,
+.mobile-ext-link,
+.footer-link,
+.recognition-btn {
+  cursor: pointer;
+}
+
+/* --- NO OVERFLOW FIX -------------------------------------- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hero grid fix: no horizontal overflow on narrow screens */
+.hero-grid {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* --- KEYBOARD NAVIGATION INDICATOR ----------------------- */
+.nav-link:focus-visible,
+.nav-ext-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* --- IMPROVED TOUCH TARGETS ------------------------------- */
+@media (max-width: 768px) {
+  .nav-link,
+  .mobile-nav-link,
+  .mobile-ext-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-menu-btn {
+    min-width: 44px;
+    min-height: 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .about-contact-item {
+    min-height: 52px;
+    justify-content: center;
+  }
+
+  .contact-link {
+    min-height: 56px;
+  }
+
+  .btn {
+    min-height: 48px;
+    padding: 14px 24px;
+  }
+}
+
+/* --- PRINT STYLES ----------------------------------------- */
+@media print {
+  #site-header,
+  .mobile-menu-btn,
+  #mobile-nav,
+  .hero-grid,
+  .hero-indicator {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* --- HIGH CONTRAST SUPPORT -------------------------------- */
+@media (forced-colors: active) {
+  .pv-bar,
+  .pcv-line,
+  .indicator-dot {
+    background: ButtonText;
+  }
+
+  .btn--primary {
+    forced-color-adjust: none;
+  }
+}
+
+/* --- HERO ACCESSIBILITY: avoid invisible text ------------- */
+.hero-description,
+.about-intro,
+.about-body {
+  color: var(--text-secondary);
+}
+
+/* Ensure sufficient contrast for muted text in key areas */
+.project-description,
+.exp-point,
+.recognition-desc {
+  color: var(--text-secondary);
+}
+
+/* --- FIX: Ensure section padding on experience works ------ */
+.section--experience {
+  padding: 0;
+}
+
+/* --- OVERFLOW FIX: Projects grid on narrow screens -------- */
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-featured {
+    grid-template-columns: 1fr;
+  }
+}

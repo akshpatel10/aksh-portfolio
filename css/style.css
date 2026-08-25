@@ -1253,13 +1253,29 @@ a:hover .ext-arrow {
 }
 
 .stack-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 0.95rem;
   color: var(--text-secondary);
   transition: color var(--transition);
 }
 
+.stack-item i {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  transition: color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+  width: 24px;
+  text-align: center;
+}
+
 .stack-item:hover {
   color: var(--text-primary);
+}
+
+.stack-item:hover i {
+  color: var(--accent);
+  transform: scale(1.1);
 }
 
 .stack-detail {

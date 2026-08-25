@@ -14,17 +14,17 @@
 
 /* â”€â”€â”€ CUSTOM PROPERTIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :root {
-  --bg:           #0A0A0A;
-  --bg-surface:   #111111;
-  --bg-elevated:  #161616;
-  --border:       #1E1E1E;
-  --border-mid:   #2A2A2A;
+  --bg:           #111111;
+  --bg-surface:   #161616;
+  --bg-elevated:  #1C1C1C;
+  --border:       #262626;
+  --border-mid:   #333333;
   --text-primary: #F2F2F2;
   --text-secondary: #AAAAAA;
-  --text-muted:   #666666;
-  --accent:       #D4822A;
-  --accent-dim:   rgba(212, 130, 42, 0.12);
-  --accent-hover: #E8952E;
+  --text-muted:   #777777;
+  --accent:       #FF0055;
+  --accent-dim:   rgba(255, 0, 85, 0.12);
+  --accent-hover: #FF3377;
 
   --font-sans:  'Inter', system-ui, -apple-system, sans-serif;
   --font-mono:  'JetBrains Mono', 'Fira Code', monospace;

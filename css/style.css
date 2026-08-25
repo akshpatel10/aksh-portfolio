@@ -1,5 +1,5 @@
-/* ═══════════════════════════════════════════════════════════
-   AKSH PATEL — PORTFOLIO
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   AKSH PATEL â€” PORTFOLIO
    style.css
 
    Design System:
@@ -8,11 +8,11 @@
    - Border:       #1E1E1E, #2A2A2A
    - Text primary: #F2F2F2
    - Text muted:   #888888, #666666
-   - Accent:       #D4822A (warm amber — restrained)
+   - Accent:       #D4822A (warm amber â€” restrained)
    - Font:         Inter (body), JetBrains Mono (labels)
-═══════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ─── CUSTOM PROPERTIES ─────────────────────────────────── */
+/* â”€â”€â”€ CUSTOM PROPERTIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :root {
   --bg:           #0A0A0A;
   --bg-surface:   #111111;
@@ -39,7 +39,7 @@
   --transition: 0.25s var(--ease-in-out);
 }
 
-/* ─── RESET & BASE ───────────────────────────────────────── */
+/* â”€â”€â”€ RESET & BASE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -84,14 +84,14 @@ button {
   font-family: inherit;
 }
 
-/* ─── FOCUS STATES ───────────────────────────────────────── */
+/* â”€â”€â”€ FOCUS STATES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
-/* ─── SCROLLBAR ──────────────────────────────────────────── */
+/* â”€â”€â”€ SCROLLBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -106,7 +106,7 @@ button {
   background: var(--text-muted);
 }
 
-/* ─── TYPOGRAPHY ─────────────────────────────────────────── */
+/* â”€â”€â”€ TYPOGRAPHY â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .mono {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -122,7 +122,7 @@ button {
   color: var(--text-muted);
 }
 
-/* ─── LAYOUT ─────────────────────────────────────────────── */
+/* â”€â”€â”€ LAYOUT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .container {
   max-width: var(--container);
   margin: 0 auto;
@@ -139,7 +139,7 @@ button {
   border-bottom: none;
 }
 
-/* ─── SECTION HEADER ─────────────────────────────────────── */
+/* â”€â”€â”€ SECTION HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section-header {
   display: flex;
   align-items: baseline;
@@ -163,7 +163,7 @@ button {
   font-weight: 500;
 }
 
-/* ─── NAVIGATION ─────────────────────────────────────────── */
+/* â”€â”€â”€ NAVIGATION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 #site-header {
   position: fixed;
   top: 0;
@@ -354,7 +354,7 @@ a:hover .ext-arrow {
   color: var(--accent);
 }
 
-/* ─── FOOTER ─────────────────────────────────────────────── */
+/* â”€â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 #site-footer {
   border-top: 1px solid var(--border);
   padding: 40px 0 32px;
@@ -423,7 +423,7 @@ a:hover .ext-arrow {
   color: var(--text-muted);
 }
 
-/* ─── SCROLL REVEAL BASE ─────────────────────────────────── */
+/* â”€â”€â”€ SCROLL REVEAL BASE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -436,7 +436,7 @@ a:hover .ext-arrow {
   transform: translateY(0);
 }
 
-/* ─── BUTTONS ────────────────────────────────────────────── */
+/* â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -485,7 +485,7 @@ a:hover .ext-arrow {
   border-color: var(--text-muted);
 }
 
-/* ─── HERO ───────────────────────────────────────────────── */
+/* â”€â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section--hero {
   min-height: 100svh;
   display: flex;
@@ -635,12 +635,12 @@ a:hover .ext-arrow {
   opacity: 0.4;
 }
 
-/* ─── UTILITY ────────────────────────────────────────────── */
+/* â”€â”€â”€ UTILITY â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .pt-nav {
   padding-top: var(--nav-height);
 }
 
-/* ─── REDUCED MOTION ─────────────────────────────────────── */
+/* â”€â”€â”€ REDUCED MOTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
@@ -656,7 +656,7 @@ a:hover .ext-arrow {
   }
 }
 
-/* ─── PROJECTS ───────────────────────────────────────────── */
+/* â”€â”€â”€ PROJECTS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section--work .container {
   max-width: var(--container);
   margin: 0 auto;
@@ -1915,15 +1915,6 @@ a:hover .ext-arrow {
   border-bottom: 1px solid var(--border);
 }
 
-/* Section inner containers inherit padding properly */
-.section--experience .container,
-.section--about .container,
-.section--stack .container,
-.section--education .container,
-.section--recognition .container {
-  padding-top: var(--section-pad);
-  padding-bottom: var(--section-pad);
-}
 
 /* Refined section header spacing */
 .section-header {
@@ -1932,7 +1923,7 @@ a:hover .ext-arrow {
   border-bottom: 1px solid var(--border);
 }
 
-/* Hero � tighter line height for large display text */
+/* Hero — tighter line height for large display text */
 .hero-name {
   line-height: 0.88;
 }
@@ -1957,7 +1948,7 @@ a:hover .ext-arrow {
   border-bottom: 1px solid var(--border);
 }
 
-/* Recognition primary item � top border emphasis */
+/* Recognition primary item — top border emphasis */
 .recognition-item--primary {
   border-top: 1px solid var(--accent-dim);
 }
@@ -2039,7 +2030,7 @@ a:hover .ext-arrow {
   margin-top: 8px;
 }
 
-/* Project featured � hover border brightens */
+/* Project featured — hover border brightens */
 .project-featured:hover {
   border-color: var(--border-mid);
 }
@@ -2204,10 +2195,6 @@ html, body {
   color: var(--text-secondary);
 }
 
-/* --- FIX: Ensure section padding on experience works ------ */
-.section--experience {
-  padding: 0;
-}
 
 /* --- OVERFLOW FIX: Projects grid on narrow screens -------- */
 @media (max-width: 640px) {
@@ -2222,7 +2209,7 @@ html, body {
 
 /* --- REAL PROJECT SCREENSHOTS ----------------------------- */
 
-/* PRASH � full-bleed dashboard screenshot */
+/* PRASH — full-bleed dashboard screenshot */
 .project-featured-visual--img {
   padding: 0;
   overflow: hidden;
@@ -2246,7 +2233,7 @@ html, body {
   filter: brightness(1);
 }
 
-/* Stint � centered phone screenshot */
+/* Stint — centered phone screenshot */
 .project-card-visual--img {
   background: #111111;
   display: flex;
